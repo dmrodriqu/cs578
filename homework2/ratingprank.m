@@ -14,30 +14,36 @@ function [theta b] = ratingprank(L,k,X,y)
   for l = 1:k-1
     b(l) = l;
   end
-  for iter = 1:L
-    for t = 1:n
-        t
-      E = {};
-      sta = {}
-      for l = 1:k-1
-          if y(t) <= l
-              stl = -1;
-          else
-              stl = 1;
-          end
-          dtp = stl * (dot(theta, X(t, :)') - b(l));
-          sta{end+1} = stl;
-          if dtp <= 0
-              E{end+1} = l;
-          end
-      end
-      if isempty(E) ~=  1
-          temp = sum([sta{:}]) * X(t,:);
-          theta = theta + sum([sta{:}]) * X(t,:)';
-        for l = 1:size(E,2)
-            b(l) = b(l) - stl;
+  s = ones(size(X,1),k-1);
+  for t = 1:size(X,1)
+    for l = 1:k-1
+        if y(t) <= l
+            s(t,l) = -1;
         end
-      end
+    end
+  end
+  for iter = 1:L
+
+    for t = 1:n
+        E = {}; 
+        
+        for l = 1:k-1
+            if s(t,l)* (dot(theta, X(t, :)') - b(l)) <= 0
+                E{end+1} = l;
+            end
+        end
+        se = size(E,2);
+        if isempty(E) ~=  1   
+          
+          sm = 0;
+          for l = 1:se
+              sm = sm + s(t, E{l});
+              theta = theta + sm * X(t,:)';
+          end
+          for l = 1:se
+            b(E{l}) = b(E{l}) - s(t,E{l});
+          end
+        end
     end
   end 
 end

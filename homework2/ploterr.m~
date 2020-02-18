@@ -1,0 +1,7 @@
+function errors = ploterr(n, k, x, y)
+    errorvec = {}
+    for i = 1:n
+        errorvec{end+1} = check1(i, k, x, y);
+    end
+    plot(errorvec(:,1)');
+end

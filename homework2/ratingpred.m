@@ -1,4 +1,3 @@
-
 % Input: number of labels k
 %        vector theta of d rows, 1 column3
 %        vector b of k-1 rows, 1 column
