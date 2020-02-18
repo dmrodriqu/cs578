@@ -1,0 +1,4 @@
+function errors = check1(L,k,X,y)
+    [theta b] = 
+end
+
