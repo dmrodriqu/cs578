@@ -40,11 +40,11 @@ function [S thetaS] = myopicfitting(F,X,y)
                 dja = [dja;[abs(dj) j]];
             end
         end
-        sorted = sortrows(dja,1);
-        v = sorted(size(dja,1),:);
-        jh = v(2);
-        S = [S jh];
-        theta = linreg(X(:,jh),calcy);
+                    sorted = sortrows(dja,1);
+            v = sorted(length(dja),:);
+            jh = v(2);
+            S = [S jh];
+            theta = linreg(X(:,jh),calcy);
         thetaS = [thetaS theta];
     end
 end
