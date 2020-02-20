@@ -19,14 +19,14 @@ function [S thetaS] = myopicfitting(F,X,y)
     for f = 1 : F
         % for every feature j in x
         % 1 
-        dja = []
+        dja = [];
         for j = 1:size(X,2)
             % if j not in s linreg
             if ~ismember(j, S)
                 % sum of (y - prediction)
                 % 
                 if isempty(thetaS)
-                    predictions = zeros(size(X,1),1)
+                    predictions = zeros(size(X,1),1);
                 else
                     % populate entire vector of predictions for s
                     % populate entire vector of y
@@ -47,4 +47,6 @@ function [S thetaS] = myopicfitting(F,X,y)
         theta = linreg(X(:,jh),calcy);
         thetaS = [thetaS theta];
     end
+    S = S'
+    thetaS = thetaS'
 end

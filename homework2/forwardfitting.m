@@ -1,3 +1,4 @@
+% dylan rodriquez
 % Input: number of features F
 % matrix X of features, with n rows (samples), d columns (features)
 % X(i,j) is the j-th feature of the i-th sample

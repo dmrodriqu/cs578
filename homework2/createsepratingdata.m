@@ -1,3 +1,4 @@
+% dylan rodriquez
 % Input: number of samples n
 % number of features d
 % number of labels k

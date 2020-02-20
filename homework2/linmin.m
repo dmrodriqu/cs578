@@ -1,3 +1,4 @@
+%% dylan rodriquez
 function tj = linmin(X,y,j, thetaS)
     calcx = X(:,j);
     if isempty(thetaS)
