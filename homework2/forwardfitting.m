@@ -35,8 +35,7 @@ function [S thetaS] = forwardfitting(F,X,y)
                         predictions(i) = dot(X_S(i,:),thetaS);
                     end
                 end
-                calcy = y-predictions;
-                
+                calcy = y-predictions;    
                 
                 % argmin 1/2 for linreg
                 tj = linreg(calcx, calcy); 
