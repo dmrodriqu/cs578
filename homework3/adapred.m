@@ -4,9 +4,11 @@
 % vector x of d rows, 1 column
 % Output: label (+1 or -1)
 function label = adapred(alpha,theta,x)
-L = size(alpha, 1)
+disp(alpha)
+disp(theta)
+L = size(alpha, 1);
 total = 0;
 for r = 1:L
-    total = total + alpha(r)*sign(x(theta(r)'));
+    total = total + alpha(r)*sign(x(theta(r)));
 end
-label = sign(total)
+label = sign(total);

@@ -1,5 +1,5 @@
-[X y] = createsepdata(100, 10);
-[alpha theta] = adaboost(100, X, y);
+[X y] = createsepdata(10, 10);
+[alpha theta] = adaboost(1, X, y);
 errors = 0;
 for l = 1:size(y,1)
     x = X(l,:)
