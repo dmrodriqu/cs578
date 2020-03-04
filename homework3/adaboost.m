@@ -24,16 +24,12 @@ for r = 1:L
         return
     end
     eps = max([eps, -0.99]);
-    alpha(r) = 1/2 * log((1-eps)/(1+eps))
+    alpha(r) = 1/2 * log((1-eps)/(1+eps));
     for t = 1:n
         raise = -alpha(r)*y(t)*sign(X(t,ix));
         W(t) = W(t)*exp(raise);
     end
-    z = sum(W)
-    W = W/z
+    z = sum(W);
+    W = W/z;
 end
 end
-% %for r = 1...L do
-% for r = 1:L
-%     wy = W * y
-% end

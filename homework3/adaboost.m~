@@ -20,10 +20,16 @@ for r = 1:L
     [val, ix] = min(minsum);
     theta(r) = ix;
     eps = val;
-    if eps
-    
-% %for r = 1...L do
-% for r = 1:L
-%     wy = W * y
-% end
+    if eps >= 0
+        return
+    end
+    eps = max([eps, -0.99]);
+    alpha(r) = 1/2 * log((1-eps)/(1+eps))
+    for t = 1:n
+        raise = -alpha(r)*y(t)*sign(X(t,ix));
+        W(t) = W(t)*exp(raise);
+    end
+    z = sum(W)
+    W = W/z
+end
 end
