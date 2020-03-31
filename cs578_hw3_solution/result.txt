@@ -1,0 +1,70 @@
+=========== Question 1 ==========
+Test case 1
+Score = 0.88, Dim mismatch = 0
+
+Test case 2
+Score = 0.88, Dim mismatch = 0
+
+Test case 3
+Score = 0.88, Dim mismatch = 0
+
+Test case 4
+Score = 0.88, Dim mismatch = 0
+
+Total = 3.50
+==================================
+
+
+=========== Question 2 ==========
+Test case 1
+Score = 0.38
+
+Test case 2
+Score = 0.38
+
+Test case 3
+Score = 0.38
+
+Test case 4
+Score = 0.38
+
+Total = 1.50
+
+==================================
+
+
+Test case 1
+=========== Question 3 ==========
+Score = 0.00
+
+=========== Question 4 ==========
+Score = 0.00
+
+Test case 2
+=========== Question 3 ==========
+Score = 0.00
+
+=========== Question 4 ==========
+Score = 0.00
+
+Test case 3
+=========== Question 3 ==========
+Score = 0.00
+
+=========== Question 4 ==========
+Score = 0.00
+
+Test case 4
+=========== Question 3 ==========
+Score = 0.00
+
+=========== Question 4 ==========
+Score = 0.00
+
+Score for 3,4 = 0.00
+
+
+
+Your Score = 5.000000
+
+Finished Grading 

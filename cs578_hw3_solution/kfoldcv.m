@@ -18,12 +18,12 @@ for i = 1:k
     total = 0;
     for tx = 1:length(folds)
         tnum = folds(tx);
-        dp = dot(thetahat, X(tnum,:))
-        true = (y(tnum,:))
-        mse = true - dp
-        
+        dp = dot(thetahat, X(tnum,:));
+        true = (y(tnum,:));
+        mse = true - dp;
+        mse = mse.^2;
+        total= total +mse;
     end
     totalmag = tmag*total;
     z(i) = totalmag;
 end
-z

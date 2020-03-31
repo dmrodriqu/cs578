@@ -1,2 +1,0 @@
-[X y] = createlinregdata(3, 10);
-alpha, hadaboost(100,X,y)

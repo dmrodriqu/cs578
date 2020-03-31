@@ -1,5 +1,5 @@
-[X y] = createlinregdata(3, 10);
-L = ;
+[X y] = createlinregdata(10, 1000);
+L = 10;
 alpha = zeros(L, 1);
 theta = ones(L,1);
 n = size(X,1);
@@ -33,5 +33,3 @@ for r = 1:L
     z = sum(W);
     W = W/z;
 end
-a
-theta

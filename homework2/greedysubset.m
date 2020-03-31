@@ -42,6 +42,8 @@ function [S thetaS] = greedysubset(F,X,y)
                 % calc sum
                 sm = 0;
                 for t = 1:size(y,1)
+                    t
+                    temp = xfeat(t,:);
                     dp = dot(thetahat, xfeat(t,:)');
                     sm = sm + 1/2*(y(t) - dp).^2;
                 end
